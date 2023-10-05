@@ -87,11 +87,12 @@ if st.button("Process!", key="process_button", type='primary'):
 
                             processedPdfData = requests.post(nougatAPIServerURL + "/predict", headers=nougatAPIHeaders, files=nougatAPIInputPDF)
                             
-                            #preprocess rules for creating mmd file
-                            #1. Unstrigify -> One header label
-                            #2. \n\n -> Actual newline character * 2
-                            #3. \n -> Actual newline character * 1
-                            #4. \\ -> \
+                            if processedPdfData.status_code == 200:
+                                #preprocess rules for creating mmd file
+                                #1. Unstrigify -> One header label
+                                #2. \n\n -> Actual newline character * 2
+                                #3. \n -> Actual newline character * 1
+                                #4. \\ -> \
 
                                 cleanData = processedPdfData.content[1:-1].decode().replace(r"\n\n",'\n\n').replace(r"\n",'\n').replace('\\\\', '\\')
 
