@@ -163,3 +163,4 @@ cython_debug/
 #Team Additions
 Part1/.asn1-part1-streamlit
 
+.DS_Store
