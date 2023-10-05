@@ -30,11 +30,13 @@ def extract_text_from_pdf_url(pdf_url):
     except Exception as e:
         st.error(f"An error occurred: {str(e)}")
         return None
-    
+
+#Function to get the name of the pdf processed file    
 def get_output_filename(pdfProcessor):
     current_datetime = datetime.datetime.now()
     formatted_datetime = current_datetime.strftime("%m_%d_%Y_%H_%M_%S")
     return pdfProcessor + "ProcessedOutput" + formatted_datetime + ".mmd"
+
 
 #To set the page configurations
 st.set_page_config(page_title="Asn1-Part1", page_icon='1️⃣', layout="wide", initial_sidebar_state="auto", menu_items=None)
@@ -74,6 +76,7 @@ if st.button("Process!", key="process_button", type='primary'):
                     if 'application/pdf' in content_type.lower():
                         st.success("Sending the PDF at '{}' for processing using '{}' processor!".format(input_pdf_link, input_pdf_processor), icon='✅')
                         if input_pdf_processor == "Nougat":
+                            
                             #Record Start time
                             start_time = time.time()
 
@@ -90,15 +93,18 @@ if st.button("Process!", key="process_button", type='primary'):
                             #3. \n -> Actual newline character * 1
                             #4. \\ -> \
 
-                            cleanData = processedPdfData.content[1:-1].decode().replace(r"\n\n",'\n\n').replace(r"\n",'\n').replace('\\\\', '\\')
+                                cleanData = processedPdfData.content[1:-1].decode().replace(r"\n\n",'\n\n').replace(r"\n",'\n').replace('\\\\', '\\')
 
-                            st.success("Processing complete!".format(input_pdf_link, input_pdf_processor), icon='✅')
+                                outputFileName = get_output_filename("Nougat")
 
-                            outputFileName = get_output_filename("Nougat")
+                                # Record the end time
+                                end_time = time.time()
 
-                            # Record the end time
-                            end_time = time.time()
-
+                                st.success("Processing complete!".format(input_pdf_link, input_pdf_processor), icon='✅')
+                            else:
+                                e = RuntimeError("Problem processing the PDF file on Nougat API Server! Try again after sometime.")
+                                st.exception(e)
+                            
                             # Calculate and display the processing time
                             if cleanData:
                                 processing_time = end_time - start_time
