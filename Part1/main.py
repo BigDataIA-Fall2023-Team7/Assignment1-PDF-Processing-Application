@@ -69,9 +69,8 @@ if st.button("Process!", key="process_button", type='primary'):
             input_pdf_processor = st.session_state.input_pdf_processor
             try:
                 downloaded_pdf_file = requests.get(input_pdf_link)
-                st.download_button(label='Original File', data=downloaded_pdf_file.content)
                 if downloaded_pdf_file.status_code == 200:
-                    content_type = downloaded_pdf_file.headers.get("Content-Type", "")
+                    content_type = downloaded_pdf_file.headers.get("Content-Type")
                     if 'application/pdf' in content_type.lower():
                         st.success("Sending the PDF at '{}' for processing using '{}' processor!".format(input_pdf_link, input_pdf_processor), icon='✅')
                         if input_pdf_processor == "Nougat":
