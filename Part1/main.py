@@ -67,61 +67,73 @@ if st.button("Process!", key="process_button", type='primary'):
     if input_pdf_link!='':
         if re.search(pdf_link_validator, input_pdf_link):
             input_pdf_processor = st.session_state.input_pdf_processor
-            downloaded_pdf_file = requests.get(input_pdf_link)
-            st.success("Sending the PDF at '{}' for processing using '{}' processor!".format(input_pdf_link, input_pdf_processor), icon='✅')
+            try:
+                downloaded_pdf_file = requests.get(input_pdf_link)
+                st.download_button(label='Original File', data=downloaded_pdf_file.content)
+                if downloaded_pdf_file.status_code == 200:
+                    content_type = downloaded_pdf_file.headers.get("Content-Type", "")
+                    if 'application/pdf' in content_type.lower():
+                        st.success("Sending the PDF at '{}' for processing using '{}' processor!".format(input_pdf_link, input_pdf_processor), icon='✅')
+                        if input_pdf_processor == "Nougat":
+                            #Record Start time
+                            start_time = time.time()
 
-            if input_pdf_processor == "Nougat":
-                #Record Start time
-                start_time = time.time()
+                            nougatAPIHeaders = {
+                                "Accept":"application/json"
+                            }
+                            nougatAPIInputPDF = {'file':downloaded_pdf_file.content}
 
-                nougatAPIHeaders = {
-                    "Accept":"application/json"
-                }
-                nougatAPIInputPDF = {'file':downloaded_pdf_file.content}
+                            processedPdfData = requests.post(nougatAPIServerURL + "/predict", headers=nougatAPIHeaders, files=nougatAPIInputPDF)
+                            
+                            #preprocess rules for creating mmd file
+                            #1. Unstrigify -> One header label
+                            #2. \n\n -> Actual newline character * 2
+                            #3. \n -> Actual newline character * 1
+                            #4. \\ -> \
 
-                processedPdfData = requests.post(nougatAPIServerURL + "/predict", headers=nougatAPIHeaders, files=nougatAPIInputPDF)
-                
-                #preprocess rules for creating mmd file
-                #1. Unstrigify -> One header label
-                #2. \n\n -> Actual newline character * 2
-                #3. \n -> Actual newline character * 1
-                #4. \\ -> \
+                            cleanData = processedPdfData.content[1:-1].decode().replace(r"\n\n",'\n\n').replace(r"\n",'\n').replace('\\\\', '\\')
 
-                cleanData = processedPdfData.content[1:-1].decode().replace(r"\n\n",'\n\n').replace(r"\n",'\n').replace('\\\\', '\\')
+                            st.success("Processing complete!".format(input_pdf_link, input_pdf_processor), icon='✅')
 
-                st.success("Processing complete!".format(input_pdf_link, input_pdf_processor), icon='✅')
+                            outputFileName = get_output_filename("Nougat")
 
-                outputFileName = get_output_filename("Nougat")
+                            # Record the end time
+                            end_time = time.time()
 
-                # Record the end time
-                end_time = time.time()
+                            # Calculate and display the processing time
+                            if cleanData:
+                                processing_time = end_time - start_time
+                                st.subheader("Processing Time:")
+                                st.write(f"Time taken: {processing_time:.2f} seconds")
+                                st.download_button(label="Download the Processed File", data=cleanData, file_name=outputFileName)
 
-                # Calculate and display the processing time
-                if cleanData:
-                    processing_time = end_time - start_time
-                    st.subheader("Processing Time:")
-                    st.write(f"Time taken: {processing_time:.2f} seconds")
-                    st.download_button(label="Download the Processed File", data=cleanData, file_name=outputFileName)
+                        elif input_pdf_processor == "PyPDF":
+                            
+                            #Record Start time
+                            start_time = time.time()
+                            
+                            #Call function to process URL using pypdf for the input pages
+                            pdf_text = extract_text_from_pdf_url(input_pdf_link)
+                            
+                            # Record the end time
+                            end_time = time.time()
 
-            elif input_pdf_processor == "PyPDF":
-                
-                #Record Start time
-                start_time = time.time()
-                
-                #Call function to process URL using pypdf for the input pages
-                pdf_text = extract_text_from_pdf_url(input_pdf_link)
-                
-                # Record the end time
-                end_time = time.time()
-
-                outputFileName = get_output_filename("PyPDF")
-                
-                # Calculate and display the processing time
-                if pdf_text:
-                    processing_time = end_time - start_time
-                    st.subheader("Processing Time:")
-                    st.write(f"Time taken: {processing_time:.2f} seconds")
-                    st.download_button(label="Download the Processed File", data=pdf_text, file_name=outputFileName)
+                            outputFileName = get_output_filename("PyPDF")
+                            
+                            # Calculate and display the processing time
+                            if pdf_text:
+                                processing_time = end_time - start_time
+                                st.subheader("Processing Time:")
+                                st.write(f"Time taken: {processing_time:.2f} seconds")
+                                st.download_button(label="Download the Processed File", data=pdf_text, file_name=outputFileName)
+                    else:
+                        e = RuntimeError("File not in pdf format")
+                        st.exception(e)
+                else:
+                    e = RuntimeError("File couldn't be found")
+                    st.exception(e)
+            except Exception as e:
+                raise e
 
         
         else:
