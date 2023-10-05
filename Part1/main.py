@@ -1,6 +1,32 @@
 import streamlit as st
 import re
 import requests
+import PyPDF2
+import io
+import time
+import os
+
+# Function to extract text from a PDF given a URL
+def extract_text_from_pdf_url(pdf_url, num_pages):
+    try:
+        # Download the PDF file
+        response = requests.get(pdf_url, stream=True)
+        f = io.BytesIO(response.content)
+        #response.raise_for_status()
+
+        # Create a PDF reader object
+        pdf_reader = PyPDF2.PdfReader(f)
+
+        # Extract text from specified number of pages
+        pages = pdf_reader.pages[:num_pages]
+        #pages = pdf_reader.pages
+        contents = "".join([page.extract_text() for page in pages])
+
+        return contents
+    
+    except Exception as e:
+        st.error(f"An error occurred: {str(e)}")
+        return None
 
 #To set the page configurations
 st.set_page_config(page_title="Asn1-Part1", page_icon='1️⃣', layout="wide", initial_sidebar_state="auto", menu_items=None)
@@ -27,7 +53,9 @@ input_pdf_link = st.text_input("Link to PDF", value="", max_chars=None, key="inp
 
 #Select Library Choice Radio Button
 st.radio("Choose the PDF Processor: ",["Nougat", "PyPDF"], captions=["Recommended for physically scanned documents, mathematical equations, etc.", "Recommended for digitally created documents"],index=0, key="input_pdf_processor")
-
+                
+# Input for number of pages to summarize
+num_pages = st.number_input("Enter the number of pages to summarize:", min_value=1, value=1)
 
 #Process Button
 if st.button("Process!", key="process_button", type='primary'):
@@ -54,7 +82,22 @@ if st.button("Process!", key="process_button", type='primary'):
                 st.download_button(label="Download the Processed File", data=processedPdfData.content, file_name="processedpdf.mmd", mime="text/mmd")
 
             elif input_pdf_processor == "PyPDF":
-                pass
+                
+                #Record Start time
+                start_time = time.time()
+                
+                #Call function to process URL using pypdf for the input pages
+                pdf_text = extract_text_from_pdf_url(input_pdf_link, num_pages)
+                
+                # Record the end time
+                end_time = time.time()
+                st.download_button(label="Download the Processed File", data=pdf_text, file_name="extracted_text.txt", mime="text/plain")
+                
+                # Calculate and display the processing time
+                if pdf_text:
+                    processing_time = end_time - start_time
+                    st.subheader("Processing Time:")
+                    st.write(f"Time taken: {processing_time:.2f} seconds")
 
         
         else:
