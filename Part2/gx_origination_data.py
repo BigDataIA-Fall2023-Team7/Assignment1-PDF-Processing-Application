@@ -353,14 +353,22 @@ class gx_origination_data:
         )
         name = "Origin_Data_Run@_"+str(current_timestamp)
         checkpoint_result = checkpoint.run(run_name=name)
+
+        #Aditya added for debugging GX validation report fail
+        print("Done gx-validating origination data supplied!")
+        print(checkpoint_result)
+        print(type(checkpoint_result))
+        
         self.context.build_data_docs()
 
         result_string = str(list(checkpoint_result.run_results.keys()))
 
         path = result_string.replace("ValidationResultIdentifier::", "") 
+
+        #Aditya
         filepath = "./Part2/gx/uncommitted/validations/" + path[1:-1] + ".json"
 
-        print("Done gx-validating origination data supplied!")
+        
 
         
 
