@@ -110,7 +110,51 @@ Flow for Part 1
 1. (Front-end) **streamlit-pdf-processing** - [link](https://github.com/BigDataIA-Fall2023-Team7/Assignment1-PDF-Processing-Application/tree/main/Part1)
 2. (Back-end) **colab-nougat-api-server** - [link](https://github.com/BigDataIA-Fall2023-Team7/Assignment1-PDF-Processing-Application/blob/main/Part1/NougatAPIServer.ipynb)
 
+### Steps to execute Part1 Streamlit application locally
+1. Clone the [repository](https://github.com/BigDataIA-Fall2023-Team7/Assignment1-PDF-Processing-Application.git) to your local machine:
+   ```
+   git clone <repository_url>
+   ```
 
+2. Navigate to the module directory:
+   ```
+   cd Part1
+   ```
+
+3. Create a virtual environment and activate it:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+   ```
+
+4. Install the required dependencies from the `requirements.txt` file:
+   ```
+   pip install -r requirements.txt
+   ```
+
+5. Run the Streamlit application:
+   ```
+   streamlit run main.py
+   ```
+
+6. Access the tool through your web browser at `http://localhost:8501`.
+
+
+---
+
+### Steps to execute Part1 NougatAPIServer on Google colab
+
+1. Download the Google Colab Notebook [link](https://github.com/BigDataIA-Fall2023-Team7/Assignment1-PDF-Processing-Application/blob/main/Part1/NougatAPIServer.ipynb)
+
+2. Create a parent-child folder 'DAMG7245_Fall2023/Assignment1' on your google drive to which your Colab notebook is connected.
+
+3. Create an account on ngrok to get authtoken [link](https://ngrok.com/)
+
+4. Copy the token to 'ngrok_authtoken.txt' file and upload it to the Assignment1 folder created in step 2
+
+5. Select 'T4 GPU' on colab runtime and run the cells. Please follow the instructions in cell comments.
+
+6. The colab notebook will generate a public URL to Nougat API server. Use that for your experimentation with either hosted streamlit app or locally hosted app.
 
 ---
 
@@ -126,6 +170,11 @@ Flow for Part 1
       -  Remove the first and last double quotations
       -  Replace \n with literal newline character
       -  Replace \\\ with \
+- PyPDF is faster than Nougat (~30 seconds for single page) for processing PDFs but looses the style and presentation information.
+
+- Ngrok public URL gets invalid after ~ 10 minutes, so you wil have to run particular cells on NougatAPIServer Colab notebook to generate a new-one. Since colab doesnot support multiple cell runs - You will have to stop the already running API server. Get a new ngrok url and then start the API Server.
+
+---
 
 
 ### Pros and Cons
