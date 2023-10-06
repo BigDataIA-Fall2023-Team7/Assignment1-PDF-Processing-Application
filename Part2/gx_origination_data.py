@@ -372,10 +372,11 @@ class gx_origination_data:
 
         path = result_string.replace("ValidationResultIdentifier::", "") 
 
-        #Aditya
-        filepath = "./Part2/gx/uncommitted/validations/" + path[1:-1] + ".json"
-        print("Done gx-origination-report filepath {}".format(filepath))
-        return filepath
+        # #Aditya
+        # filepath = "./Part2/gx/uncommitted/validations/" + path[1:-1] + ".json"
+        # print("Done gx-origination-report filepath {}".format(filepath))
+        # return filepath
 
         #returning actual gx-report-json data instead of locally persisted file.
+        return json.dumps(checkpoint_result.to_json_dict())
         
