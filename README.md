@@ -39,19 +39,35 @@ Two Streamlit applications have been developed one that processes PDFs either vi
 4. If the PDF Processor is PyPDF it processes the PDF on Streamlit Cloud itself
 5. If the PDF Processor is Nougat it sends the downloaded PDF to Ngrok Agent which is accessible via public internet
 6. Once the Ngrok Agent gets the request, it forwards it to Google Colab ngrok service
-7.  Ngrok service forwards the request to Nougat API running on port 8503
+7. Ngrok service forwards the request to Nougat API running on port 8503
 8. Nougat API processes the PDF and returns the MMD file via HTTP to streamlit application
 9. User downloads MMD files from Streamlit
 
 
 ---
 
-## Source Code References 💻
+### Source Code References 💻
 
 1. Branch: **streamlit-pdf-processing** - [link](https://github.com/BigDataIA-Fall2023-Team7/Assignment1-PDF-Processing-Application/tree/main/Part1)
 
 ---
 
+### Observations
+1. Nougat
+OCR (Optical Character Recognition): Nougat includes built-in OCR capabilities, which means it can extract text from scanned PDFs or images, making it suitable for handling non-text-based PDFs.
+
+Advanced Text Extraction: It provides more advanced text extraction features, such as the ability to extract text from specific regions or layouts within a PDF.
+
+Layout Preservation: Nougat focuses on preserving the original layout and formatting of the extracted text, which is useful for applications where maintaining the visual integrity of the PDF is important.
+
+2. Pypdf
+OCR Support: PyPDF2 does not include built-in OCR support; you would need to use a separate OCR library or tool if you need to extract text from scanned PDFs.
+
+Basic Text Extraction: PyPDF2 primarily focuses on basic text extraction from PDF documents. It may not handle scanned or image-based PDFs well without the aid of external OCR tools.
+
+Layout Preservation: PyPDF2 may not preserve the original layout and formatting of text as accurately as Nougat, especially in complex PDFs.
+
+---
 ## Part 2
 ### Links 📎
 * 📕 Codelab Doc - [link](https://codelabs-preview.appspot.com/?file_id=)
@@ -103,6 +119,7 @@ Two Streamlit applications have been developed one that processes PDFs either vi
 | **Developer** 	|          **Deliverables**          	|
 |:-------------:	|:----------------------------------:	|
 |      Aditya      	| Streamlit Part 1 - Nougat             |
+|      Aditya      	| Git setup and integration             |
 |      Nidhi      	| Streamlit Part 1 - Pypdf          	|
 |      Uddhav      	| Streamlit Part 2 - Great Expectation  |
 |      Uddhav      	| Streamlit Part 2 - Ydata Profiling    |
