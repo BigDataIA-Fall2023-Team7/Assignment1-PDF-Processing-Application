@@ -1,11 +1,12 @@
 import streamlit as st
 import os
 
+st.write("This is the current directory -> {}".format(os.getcwd()))
 
-st.write(os.getcwd())
-st.write(os.listdir())
-st.write(os.listdir('./Part2'))
-st.write(os.listdir('./Part2/gx/uncommitted/validations'))
+a = st.text_input(label="Enter the path", value=".")
+
+st.write("This is the list directory ")
+st.write(os.listdir(a))
 
 
 
@@ -22,6 +23,6 @@ def list_files_and_directories(path):
             st.write(f"File: {os.path.join(root, file)}")
 
 # Specify the directory you want to start from
-start_directory = "./Part2"
+start_directory = a
 list_files_and_directories(start_directory)
 
