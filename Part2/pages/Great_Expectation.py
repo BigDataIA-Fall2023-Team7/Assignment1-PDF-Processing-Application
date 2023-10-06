@@ -4,7 +4,7 @@ import tempfile
 from io import BytesIO
 import streamlit.components.v1 as components
 
-filepath = "./gx/uncommitted/data_docs/local_site/index.html"
+filepath = "./Part2/gx/uncommitted/data_docs/local_site/index.html"
 
 st.set_page_config(layout="wide")
 
