@@ -195,7 +195,7 @@ def main():
     profile_type = 'Regular Exploratory Data Analysis (EDA)'
     if st.sidebar.button('Process Data') is False:
         st.markdown("<h1 style='text-align: center;'>Freddie Mac Single Family Dataset Quality Evaluation</h1>", unsafe_allow_html=True)
-        # st.image("architecture_diagram.png", use_column_width=True)
+        st.image("./Part2/architecture_diagram.png", use_column_width=True)
     else:
         data_process(uploaded_file, data_type, profile_type)
 
