@@ -1,0 +1,116 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "Origination_2022",
+      "data_connector_name": "fluent",
+      "datasource_name": "Filesystem_Origination"
+    },
+    "batch_markers": {
+      "ge_load_time": "20231006T015952.901588Z",
+      "pandas_data_fingerprint": "40463cbb9a8dd0e9afedf4a947ca0ff6"
+    },
+    "batch_spec": {
+      "reader_method": "read_excel",
+      "reader_options": {
+        "io": "data/origination/origination_2022.xlsx"
+      }
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "Origin_Data_Credit Score_1696557592.881719",
+    "expectation_suite_name": "origin_data_expectation_suite",
+    "great_expectations_version": "0.17.19",
+    "run_id": {
+      "run_name": "test",
+      "run_time": "2023-10-05T21:59:52.896884-04:00"
+    },
+    "validation_id": null,
+    "validation_time": "20231006T020005.141702Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Filesystem_Origination-Origination_2022",
+          "column": "Credit Score"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Filesystem_Origination-Origination_2022",
+          "column": "Credit Score",
+          "regex": "^(9999|([3-7][0-9][0-9]|8[0-4][0-9]|850))$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Filesystem_Origination-Origination_2022",
+          "column": "Credit Score",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 3,
+    "success_percent": 100.0,
+    "successful_expectations": 3,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}

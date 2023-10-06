@@ -1,0 +1,39 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "Origination_2022",
+      "data_connector_name": "fluent",
+      "datasource_name": "Filesystem_Origination"
+    },
+    "batch_markers": {
+      "ge_load_time": "20231006T010832.508661Z",
+      "pandas_data_fingerprint": "40463cbb9a8dd0e9afedf4a947ca0ff6"
+    },
+    "batch_spec": {
+      "reader_method": "read_excel",
+      "reader_options": {
+        "io": "data/origination/origination_2022.xlsx"
+      }
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "Origin_Data_Credit Score_1696554512.490665",
+    "expectation_suite_name": "origin_data_expectation_suite",
+    "great_expectations_version": "0.17.19",
+    "run_id": {
+      "run_name": "test",
+      "run_time": "2023-10-05T21:08:32.503943-04:00"
+    },
+    "validation_id": null,
+    "validation_time": "20231006T010844.721241Z"
+  },
+  "results": [],
+  "statistics": {
+    "evaluated_expectations": 0,
+    "success_percent": null,
+    "successful_expectations": 0,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}

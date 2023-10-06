@@ -1,0 +1,199 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "Origination_2022",
+      "data_connector_name": "fluent",
+      "datasource_name": "Filesystem_Origination"
+    },
+    "batch_markers": {
+      "ge_load_time": "20231006T011151.027544Z",
+      "pandas_data_fingerprint": "40463cbb9a8dd0e9afedf4a947ca0ff6"
+    },
+    "batch_spec": {
+      "reader_method": "read_excel",
+      "reader_options": {
+        "io": "data/origination/origination_2022.xlsx"
+      }
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "Origin_Data_Credit Score_1696554711.01244",
+    "expectation_suite_name": "origin_data_expectation_suite",
+    "great_expectations_version": "0.17.19",
+    "run_id": {
+      "run_name": "test",
+      "run_time": "2023-10-05T21:11:51.022651-04:00"
+    },
+    "validation_id": null,
+    "validation_time": "20231006T011203.022770Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Filesystem_Origination-Origination_2022",
+          "column": "Credit Score"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Filesystem_Origination-Origination_2022",
+          "column": "Credit Score",
+          "regex": "^(9999|([3-7][0-9][0-9]|850))$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 4,
+            "value": 804
+          },
+          {
+            "count": 3,
+            "value": 801
+          },
+          {
+            "count": 3,
+            "value": 809
+          },
+          {
+            "count": 2,
+            "value": 807
+          },
+          {
+            "count": 2,
+            "value": 812
+          },
+          {
+            "count": 2,
+            "value": 815
+          },
+          {
+            "count": 1,
+            "value": 802
+          },
+          {
+            "count": 1,
+            "value": 805
+          },
+          {
+            "count": 1,
+            "value": 808
+          },
+          {
+            "count": 1,
+            "value": 814
+          }
+        ],
+        "partial_unexpected_index_list": [
+          1,
+          7,
+          8,
+          10,
+          27,
+          29,
+          51,
+          57,
+          60,
+          70,
+          72,
+          75,
+          80,
+          81,
+          108,
+          122,
+          123,
+          141,
+          146,
+          156
+        ],
+        "partial_unexpected_list": [
+          809,
+          802,
+          804,
+          809,
+          807,
+          812,
+          807,
+          815,
+          815,
+          809,
+          801,
+          812,
+          805,
+          814,
+          801,
+          804,
+          801,
+          804,
+          804,
+          808
+        ],
+        "unexpected_count": 4914,
+        "unexpected_percent": 9.828196563931279,
+        "unexpected_percent_nonmissing": 9.828196563931279,
+        "unexpected_percent_total": 9.828196563931279
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Filesystem_Origination-Origination_2022",
+          "column": "Credit Score",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 3,
+    "success_percent": 66.66666666666666,
+    "successful_expectations": 2,
+    "unsuccessful_expectations": 1
+  },
+  "success": false
+}

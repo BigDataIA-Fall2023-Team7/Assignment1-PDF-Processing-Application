@@ -1,0 +1,2711 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "Monthly_Asset_1696580821.3837938",
+      "data_connector_name": "fluent",
+      "datasource_name": "Monthly_Datasource_1696580821.3837938"
+    },
+    "batch_markers": {
+      "ge_load_time": "20231006T082708.974388Z",
+      "pandas_data_fingerprint": "0700f714522e662c8e9b7844271364b8"
+    },
+    "batch_spec": {
+      "batch_data": "PandasDataFrame"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "Checkpoint_MON_COL_Current Month Modification Cost_1696580828.959925",
+    "expectation_suite_name": "Monthly_Suite_1696580821.3837938",
+    "great_expectations_version": "0.17.19",
+    "run_id": {
+      "run_name": "Monthly_Data_Run@_1696580828.959925",
+      "run_time": "2023-10-06T04:27:08.969198-04:00"
+    },
+    "validation_id": null,
+    "validation_time": "20231006T082709.149731Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_column_count_to_equal",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "value": 32
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 32
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_ordered_list",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column_list": [
+            "Loan Sequence Number",
+            "Monthly Reporting Period",
+            "Current Actual UPB",
+            "Current Loan Delinquency Status",
+            "Loan Age",
+            "Remaining Months to Legal Maturity",
+            "Defect Settlement Date",
+            "Modification Flag",
+            "Zero Balance Code",
+            "Zero Balance Effective Date",
+            "Current Interest Rate",
+            "Current Deferred UPB",
+            "Due Date of Last Paid Installment (DDLPI)",
+            "MI Recoveries",
+            "Net Sales Proceeds",
+            "Non MI Recoveries",
+            "Expenses",
+            "Legal Costs",
+            "Maintenance and Preservation Costs",
+            "Taxes and Insurance",
+            "Miscellaneous Expenses",
+            "Actual Loss Calculation",
+            "Modification Cost",
+            "Step Modification Flag",
+            "Deferred Payment Plan",
+            "Estimated Loan-to-Value (ELTV)",
+            "Zero Balance Removal UPB",
+            "Delinquent Accrued Interest",
+            "Delinquency Due to Disaster",
+            "Borrower Assistance Status Code",
+            "Current Month Modification Cost",
+            "Interest Bearing UPB"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": [
+          "Loan Sequence Number",
+          "Monthly Reporting Period",
+          "Current Actual UPB",
+          "Current Loan Delinquency Status",
+          "Loan Age",
+          "Remaining Months to Legal Maturity",
+          "Defect Settlement Date",
+          "Modification Flag",
+          "Zero Balance Code",
+          "Zero Balance Effective Date",
+          "Current Interest Rate",
+          "Current Deferred UPB",
+          "Due Date of Last Paid Installment (DDLPI)",
+          "MI Recoveries",
+          "Net Sales Proceeds",
+          "Non MI Recoveries",
+          "Expenses",
+          "Legal Costs",
+          "Maintenance and Preservation Costs",
+          "Taxes and Insurance",
+          "Miscellaneous Expenses",
+          "Actual Loss Calculation",
+          "Modification Cost",
+          "Step Modification Flag",
+          "Deferred Payment Plan",
+          "Estimated Loan-to-Value (ELTV)",
+          "Zero Balance Removal UPB",
+          "Delinquent Accrued Interest",
+          "Delinquency Due to Disaster",
+          "Borrower Assistance Status Code",
+          "Current Month Modification Cost",
+          "Interest Bearing UPB"
+        ]
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Loan Sequence Number"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Loan Sequence Number",
+          "regex": "^(F|A)\\d{2}Q[1-4]\\d{7}$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Loan Sequence Number",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Loan Sequence Number",
+          "value": 12
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Monthly Reporting Period"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Monthly Reporting Period",
+          "regex": "^(?:19|20)\\d{2}(0[1-9]|1[0-2])$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "2022-03-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-04-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-11-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-12-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-01-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-11-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2023-01-01 00:00:00",
+          "2023-02-01 00:00:00",
+          "2023-03-01 00:00:00",
+          "2022-02-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00"
+        ],
+        "unexpected_count": 419439,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Monthly Reporting Period",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "2022-03-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-04-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-11-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-12-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-01-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-11-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2023-01-01 00:00:00",
+          "2023-02-01 00:00:00",
+          "2023-03-01 00:00:00",
+          "2022-02-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00"
+        ],
+        "unexpected_count": 419439,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Monthly Reporting Period",
+          "value": 6
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "2022-03-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-04-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-11-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-12-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-01-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-11-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2023-01-01 00:00:00",
+          "2023-02-01 00:00:00",
+          "2023-03-01 00:00:00",
+          "2022-02-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00"
+        ],
+        "unexpected_count": 419439,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Current Actual UPB",
+          "regex": "^\\d{1,5}|\\d{1,4}\\.\\d|\\d{1,3}\\.\\d{2}$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Current Deferred UPB",
+          "regex": "^\\d{1,5}|\\d{1,4}\\.\\d|\\d{1,3}\\.\\d{2}$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Modification Cost",
+          "regex": "^\\d{1,5}|\\d{1,4}\\.\\d|\\d{1,3}\\.\\d{2}$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419418,
+        "missing_percent": 99.99499331249598,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Zero Balance Removal UPB",
+          "regex": "^\\d{1,5}|\\d{1,4}\\.\\d|\\d{1,3}\\.\\d{2}$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418336,
+        "missing_percent": 99.73702969919344,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Current Month Modification Cost",
+          "regex": "^\\d{1,5}|\\d{1,4}\\.\\d|\\d{1,3}\\.\\d{2}$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419386,
+        "missing_percent": 99.98736407439462,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Interest Bearing UPB",
+          "regex": "^\\d{1,5}|\\d{1,4}\\.\\d|\\d{1,3}\\.\\d{2}$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Current Loan Delinquency Status"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Current Loan Delinquency Status",
+          "max_value": 3,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Remaining Months to Legal Maturity"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Remaining Months to Legal Maturity",
+          "max_value": 3,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Defect Settlement Date",
+          "regex": "^(?:19|20)\\d{2}(0[1-9]|1[0-2])$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419350,
+        "missing_percent": 99.97878118153056,
+        "partial_unexpected_counts": [
+          {
+            "count": 5,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 5,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-12-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          7053,
+          7832,
+          9784,
+          14041,
+          14077,
+          20986,
+          30290,
+          37984,
+          42779,
+          54487,
+          58247,
+          58423,
+          60085,
+          61353,
+          70921,
+          72001,
+          73909,
+          80818,
+          93885,
+          94378
+        ],
+        "partial_unexpected_list": [
+          "2022-06-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-10-01 00:00:00"
+        ],
+        "unexpected_count": 89,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 0.02121881846943179
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Defect Settlement Date",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419350,
+        "missing_percent": 99.97878118153056,
+        "partial_unexpected_counts": [
+          {
+            "count": 5,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 5,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-12-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          7053,
+          7832,
+          9784,
+          14041,
+          14077,
+          20986,
+          30290,
+          37984,
+          42779,
+          54487,
+          58247,
+          58423,
+          60085,
+          61353,
+          70921,
+          72001,
+          73909,
+          80818,
+          93885,
+          94378
+        ],
+        "partial_unexpected_list": [
+          "2022-06-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-10-01 00:00:00"
+        ],
+        "unexpected_count": 89,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 0.02121881846943179
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Defect Settlement Date",
+          "value": 6
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419350,
+        "missing_percent": 99.97878118153056,
+        "partial_unexpected_counts": [
+          {
+            "count": 5,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 5,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-12-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          7053,
+          7832,
+          9784,
+          14041,
+          14077,
+          20986,
+          30290,
+          37984,
+          42779,
+          54487,
+          58247,
+          58423,
+          60085,
+          61353,
+          70921,
+          72001,
+          73909,
+          80818,
+          93885,
+          94378
+        ],
+        "partial_unexpected_list": [
+          "2022-06-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-10-01 00:00:00"
+        ],
+        "unexpected_count": 89,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 0.02121881846943179
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Modification Flag",
+          "value_set": [
+            "Y",
+            "P",
+            ""
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419437,
+        "missing_percent": 99.99952317261867,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Modification Flag",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419437,
+        "missing_percent": 99.99952317261867,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Modification Flag",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419437,
+        "missing_percent": 99.99952317261867,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Deferred Payment Plan",
+          "value_set": [
+            "Y",
+            "P",
+            ""
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419388,
+        "missing_percent": 99.98784090177595,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Deferred Payment Plan",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419388,
+        "missing_percent": 99.98784090177595,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Deferred Payment Plan",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 419388,
+        "missing_percent": 99.98784090177595,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Estimated Loan-to-Value (ELTV)",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Estimated Loan-to-Value (ELTV)",
+          "max_value": 999,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Zero Balance Code"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "partial_unexpected_counts": [
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          },
+          {
+            "count": 1,
+            "value": null
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "unexpected_count": 418336,
+        "unexpected_percent": 99.73702969919344
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Zero Balance Code",
+          "value_set": [
+            1,
+            2,
+            3,
+            96,
+            9,
+            15,
+            16
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418336,
+        "missing_percent": 99.73702969919344,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Zero Balance Code",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Zero Balance Code",
+          "max_value": 2,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418336,
+        "missing_percent": 99.73702969919344,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": 1.0
+          }
+        ],
+        "partial_unexpected_index_list": [
+          188,
+          387,
+          420,
+          569,
+          949,
+          2025,
+          2258,
+          3394,
+          3398,
+          3532,
+          3552,
+          3757,
+          3970,
+          4926,
+          5032,
+          5065,
+          5188,
+          5830,
+          5867,
+          6120
+        ],
+        "partial_unexpected_list": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "unexpected_count": 1103,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 0.2629703008065535
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Zero Balance Effective Date",
+          "regex": "^(?:19|20)\\d{2}(0[1-9]|1[0-2])$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418336,
+        "missing_percent": 99.73702969919344,
+        "partial_unexpected_counts": [
+          {
+            "count": 4,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 3,
+            "value": "2022-04-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-12-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-11-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          188,
+          387,
+          420,
+          569,
+          949,
+          2025,
+          2258,
+          3394,
+          3398,
+          3532,
+          3552,
+          3757,
+          3970,
+          4926,
+          5032,
+          5065,
+          5188,
+          5830,
+          5867,
+          6120
+        ],
+        "partial_unexpected_list": [
+          "2022-11-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2023-03-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-04-01 00:00:00"
+        ],
+        "unexpected_count": 1103,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 0.2629703008065535
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Zero Balance Effective Date",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418336,
+        "missing_percent": 99.73702969919344,
+        "partial_unexpected_counts": [
+          {
+            "count": 4,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 3,
+            "value": "2022-04-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-12-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-11-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          188,
+          387,
+          420,
+          569,
+          949,
+          2025,
+          2258,
+          3394,
+          3398,
+          3532,
+          3552,
+          3757,
+          3970,
+          4926,
+          5032,
+          5065,
+          5188,
+          5830,
+          5867,
+          6120
+        ],
+        "partial_unexpected_list": [
+          "2022-11-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2023-03-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-04-01 00:00:00"
+        ],
+        "unexpected_count": 1103,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 0.2629703008065535
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Zero Balance Effective Date",
+          "value": 6
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418336,
+        "missing_percent": 99.73702969919344,
+        "partial_unexpected_counts": [
+          {
+            "count": 4,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 3,
+            "value": "2022-04-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-12-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-11-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          188,
+          387,
+          420,
+          569,
+          949,
+          2025,
+          2258,
+          3394,
+          3398,
+          3532,
+          3552,
+          3757,
+          3970,
+          4926,
+          5032,
+          5065,
+          5188,
+          5830,
+          5867,
+          6120
+        ],
+        "partial_unexpected_list": [
+          "2022-11-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-12-01 00:00:00",
+          "2023-03-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-04-01 00:00:00"
+        ],
+        "unexpected_count": 1103,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 0.2629703008065535
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Due Date of Last Paid Installment (DDLPI)",
+          "regex": "^(?:19|20)\\d{2}(0[1-9]|1[0-2])$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418336,
+        "missing_percent": 99.73702969919344,
+        "partial_unexpected_counts": [
+          {
+            "count": 4,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 3,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 3,
+            "value": "2022-11-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-04-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-03-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          188,
+          387,
+          420,
+          569,
+          949,
+          2025,
+          2258,
+          3394,
+          3398,
+          3532,
+          3552,
+          3757,
+          3970,
+          4926,
+          5032,
+          5065,
+          5188,
+          5830,
+          5867,
+          6120
+        ],
+        "partial_unexpected_list": [
+          "2022-11-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-11-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-11-01 00:00:00",
+          "2023-03-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-04-01 00:00:00"
+        ],
+        "unexpected_count": 1103,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 0.2629703008065535
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Due Date of Last Paid Installment (DDLPI)",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418336,
+        "missing_percent": 99.73702969919344,
+        "partial_unexpected_counts": [
+          {
+            "count": 4,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 3,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 3,
+            "value": "2022-11-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-04-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-03-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          188,
+          387,
+          420,
+          569,
+          949,
+          2025,
+          2258,
+          3394,
+          3398,
+          3532,
+          3552,
+          3757,
+          3970,
+          4926,
+          5032,
+          5065,
+          5188,
+          5830,
+          5867,
+          6120
+        ],
+        "partial_unexpected_list": [
+          "2022-11-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-11-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-11-01 00:00:00",
+          "2023-03-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-04-01 00:00:00"
+        ],
+        "unexpected_count": 1103,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 0.2629703008065535
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Due Date of Last Paid Installment (DDLPI)",
+          "value": 6
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418336,
+        "missing_percent": 99.73702969919344,
+        "partial_unexpected_counts": [
+          {
+            "count": 4,
+            "value": "2022-08-01 00:00:00"
+          },
+          {
+            "count": 3,
+            "value": "2022-10-01 00:00:00"
+          },
+          {
+            "count": 3,
+            "value": "2022-11-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-04-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-05-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2022-09-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-03-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-06-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2022-07-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2023-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          188,
+          387,
+          420,
+          569,
+          949,
+          2025,
+          2258,
+          3394,
+          3398,
+          3532,
+          3552,
+          3757,
+          3970,
+          4926,
+          5032,
+          5065,
+          5188,
+          5830,
+          5867,
+          6120
+        ],
+        "partial_unexpected_list": [
+          "2022-11-01 00:00:00",
+          "2022-06-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-11-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-07-01 00:00:00",
+          "2022-08-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-09-01 00:00:00",
+          "2022-05-01 00:00:00",
+          "2022-11-01 00:00:00",
+          "2023-03-01 00:00:00",
+          "2022-10-01 00:00:00",
+          "2022-04-01 00:00:00"
+        ],
+        "unexpected_count": 1103,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 0.2629703008065535
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Current Interest Rate"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Current Interest Rate",
+          "max_value": 6,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Delinquency Due to Disaster",
+          "value_set": [
+            "Y",
+            ""
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418749,
+        "missing_percent": 99.83549455343925,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Delinquency Due to Disaster",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418749,
+        "missing_percent": 99.83549455343925,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Delinquency Due to Disaster",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418749,
+        "missing_percent": 99.83549455343925,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Borrower Assistance Status Code",
+          "value_set": [
+            "F",
+            "R",
+            "T"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418612,
+        "missing_percent": 99.80283187781775,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Borrower Assistance Status Code",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418612,
+        "missing_percent": 99.80283187781775,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Monthly_Datasource_1696580821.3837938-Monthly_Asset_1696580821.3837938",
+          "column": "Borrower Assistance Status Code",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 419439,
+        "missing_count": 418612,
+        "missing_percent": 99.80283187781775,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 49,
+    "success_percent": 67.3469387755102,
+    "successful_expectations": 33,
+    "unsuccessful_expectations": 16
+  },
+  "success": false
+}

@@ -1,0 +1,3667 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "Origination_Asset_1696586985.396239",
+      "data_connector_name": "fluent",
+      "datasource_name": "Origination_Datasource_1696586985.396239"
+    },
+    "batch_markers": {
+      "ge_load_time": "20231006T100950.372701Z",
+      "pandas_data_fingerprint": "2ac6433aa2543ab7ad02d78c42a75a91"
+    },
+    "batch_spec": {
+      "batch_data": "PandasDataFrame"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "Checkpoint_OD_COL_Mortgage Insurance Cancellation Indicator_1696586990.359275",
+    "expectation_suite_name": "Origination_Suite_1696586985.396239",
+    "great_expectations_version": "0.17.19",
+    "run_id": {
+      "run_name": "Origin_Data_Run@_1696586990.359275",
+      "run_time": "2023-10-06T06:09:50.366644-04:00"
+    },
+    "validation_id": null,
+    "validation_time": "20231006T100950.425343Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_column_count_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "value": 32
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 32
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_ordered_list",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column_list": [
+            "Credit Score",
+            "First Payment Date",
+            "First Time Homebuyer Flag",
+            "Maturity Date",
+            "Metropolitan Statistical Area (MSA) Or Metropolitan Division",
+            "Mortgage Insurance Percentage (MI %)",
+            "Number of Units",
+            "Occupancy Status",
+            "Original Combined Loan-to-Value (CLTV)",
+            "Original Debt-to-Income (DTI) Ratio",
+            "Original UPB",
+            "Original Loan-to-Value (LTV)",
+            "Original Interest Rate",
+            "Channel",
+            "Prepayment Penalty Mortgage (PPM) Flag",
+            "Amortization Type (Formerly Product Type)",
+            "Property State",
+            "Property Type",
+            "Postal Code",
+            "Loan Sequence Number",
+            "Loan Purpose",
+            "Original Loan Term",
+            "Number of Borrowers",
+            "Seller Name",
+            "Servicer Name",
+            "Super Conforming Flag",
+            "Pre-HARP Loan Sequence Number",
+            "Program Indicator",
+            "HARP Indicator",
+            "Property Valuation Method",
+            "Interest Only (I/O) Indicator",
+            "Mortgage Insurance Cancellation Indicator"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": [
+          "Credit Score",
+          "First Payment Date",
+          "First Time Homebuyer Flag",
+          "Maturity Date",
+          "Metropolitan Statistical Area (MSA) Or Metropolitan Division",
+          "Mortgage Insurance Percentage (MI %)",
+          "Number of Units",
+          "Occupancy Status",
+          "Original Combined Loan-to-Value (CLTV)",
+          "Original Debt-to-Income (DTI) Ratio",
+          "Original UPB",
+          "Original Loan-to-Value (LTV)",
+          "Original Interest Rate",
+          "Channel",
+          "Prepayment Penalty Mortgage (PPM) Flag",
+          "Amortization Type (Formerly Product Type)",
+          "Property State",
+          "Property Type",
+          "Postal Code",
+          "Loan Sequence Number",
+          "Loan Purpose",
+          "Original Loan Term",
+          "Number of Borrowers",
+          "Seller Name",
+          "Servicer Name",
+          "Super Conforming Flag",
+          "Pre-HARP Loan Sequence Number",
+          "Program Indicator",
+          "HARP Indicator",
+          "Property Valuation Method",
+          "Interest Only (I/O) Indicator",
+          "Mortgage Insurance Cancellation Indicator"
+        ]
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Credit Score"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Credit Score",
+          "regex": "^(9999|([3-7][0-9][0-9]|8[0-4][0-9]|850))$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Credit Score",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "First Payment Date"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "First Payment Date",
+          "regex": "^(?:19|20)\\d{2}(0[1-9]|1[0-2])$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 16,
+            "value": "2022-03-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2022-04-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00"
+        ],
+        "unexpected_count": 49999,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "First Payment Date",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 16,
+            "value": "2022-03-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2022-04-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00"
+        ],
+        "unexpected_count": 49999,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "First Payment Date",
+          "value": 6
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 16,
+            "value": "2022-03-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2022-04-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-03-01 00:00:00"
+        ],
+        "unexpected_count": 49999,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "First Time Homebuyer Flag"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "First Time Homebuyer Flag",
+          "value_set": [
+            "Y",
+            "N",
+            "9"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "First Time Homebuyer Flag",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "First Time Homebuyer Flag",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Maturity Date"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Maturity Date",
+          "regex": "^(?:19|20)\\d{2}(0[1-9]|1[0-2])$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 10,
+            "value": "2052-02-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2037-02-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2037-03-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2032-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2042-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2042-03-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2052-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "2052-02-01 00:00:00",
+          "2042-03-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-03-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2032-02-01 00:00:00",
+          "2037-03-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-03-01 00:00:00",
+          "2042-02-01 00:00:00"
+        ],
+        "unexpected_count": 49999,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Maturity Date",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 10,
+            "value": "2052-02-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2037-02-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2037-03-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2032-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2042-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2042-03-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2052-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "2052-02-01 00:00:00",
+          "2042-03-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-03-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2032-02-01 00:00:00",
+          "2037-03-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-03-01 00:00:00",
+          "2042-02-01 00:00:00"
+        ],
+        "unexpected_count": 49999,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Maturity Date",
+          "value": 6
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 10,
+            "value": "2052-02-01 00:00:00"
+          },
+          {
+            "count": 4,
+            "value": "2037-02-01 00:00:00"
+          },
+          {
+            "count": 2,
+            "value": "2037-03-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2032-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2042-02-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2042-03-01 00:00:00"
+          },
+          {
+            "count": 1,
+            "value": "2052-03-01 00:00:00"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "2052-02-01 00:00:00",
+          "2042-03-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-03-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2032-02-01 00:00:00",
+          "2037-03-01 00:00:00",
+          "2052-02-01 00:00:00",
+          "2037-03-01 00:00:00",
+          "2042-02-01 00:00:00"
+        ],
+        "unexpected_count": 49999,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Metropolitan Statistical Area (MSA) Or Metropolitan Division",
+          "regex": "^\\d{1,5}\\.\\d{1}$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 5079,
+        "missing_percent": 10.15820316406328,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Mortgage Insurance Percentage (MI %)",
+          "regex": "^(0|999|([1-4]\\d|5[0-5]))$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": 6
+          }
+        ],
+        "partial_unexpected_index_list": [
+          48,
+          419,
+          710,
+          1303,
+          1741,
+          2492,
+          2983,
+          3914,
+          3986,
+          5362,
+          5396,
+          5805,
+          6136,
+          6389,
+          7044,
+          8033,
+          9048,
+          10117,
+          10953,
+          11303
+        ],
+        "partial_unexpected_list": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "unexpected_count": 56,
+        "unexpected_percent": 0.1120022400448009,
+        "unexpected_percent_nonmissing": 0.1120022400448009,
+        "unexpected_percent_total": 0.1120022400448009
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Mortgage Insurance Percentage (MI %)"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Mortgage Insurance Percentage (MI %)",
+          "max_value": 3,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Number of Units"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Number of Units",
+          "value_set": [
+            1,
+            2,
+            3,
+            4,
+            99
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Number of Units",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Number of Units",
+          "max_value": 2,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original Combined Loan-to-Value (CLTV)"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original Combined Loan-to-Value (CLTV)",
+          "max_value": 999,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original Debt-to-Income (DTI) Ratio"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original Debt-to-Income (DTI) Ratio",
+          "regex": "^(999|[1-9]|[1-5]\\d|6[0-5])$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original Debt-to-Income (DTI) Ratio",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original UPB"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original UPB",
+          "max_value": 12,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original Interest Rate"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original Interest Rate",
+          "max_value": 6,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Channel"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Channel",
+          "value_set": [
+            "R",
+            "B",
+            "C",
+            "T",
+            "9"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Channel",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Channel",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Prepayment Penalty Mortgage (PPM) Flag"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Prepayment Penalty Mortgage (PPM) Flag",
+          "value_set": [
+            "Y",
+            "N"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Prepayment Penalty Mortgage (PPM) Flag",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Prepayment Penalty Mortgage (PPM) Flag",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Amortization Type (Formerly Product Type)"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Amortization Type (Formerly Product Type)",
+          "value_set": [
+            "FRM",
+            "ARM"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Amortization Type (Formerly Product Type)",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property State"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property State",
+          "value_set": [
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DC",
+            "DE",
+            "FL",
+            "GA",
+            "GU",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "PR",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VI",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property State",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property State",
+          "value": 2
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property Type"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property Type",
+          "value_set": [
+            "CO",
+            "PU",
+            "MH",
+            "SF",
+            "CP",
+            "99"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property Type",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property Type",
+          "value": 2
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Postal Code"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Postal Code",
+          "regex": "^(0[5]|\\d{3}00)$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": 7000
+          },
+          {
+            "count": 2,
+            "value": 8000
+          },
+          {
+            "count": 1,
+            "value": 1600
+          },
+          {
+            "count": 1,
+            "value": 1800
+          },
+          {
+            "count": 1,
+            "value": 1900
+          },
+          {
+            "count": 1,
+            "value": 2100
+          },
+          {
+            "count": 1,
+            "value": 2600
+          },
+          {
+            "count": 1,
+            "value": 2800
+          },
+          {
+            "count": 1,
+            "value": 4100
+          },
+          {
+            "count": 1,
+            "value": 5400
+          },
+          {
+            "count": 1,
+            "value": 6100
+          },
+          {
+            "count": 1,
+            "value": 6300
+          },
+          {
+            "count": 1,
+            "value": 6400
+          },
+          {
+            "count": 1,
+            "value": 6700
+          },
+          {
+            "count": 1,
+            "value": 6800
+          },
+          {
+            "count": 1,
+            "value": 7100
+          },
+          {
+            "count": 1,
+            "value": 7300
+          },
+          {
+            "count": 1,
+            "value": 8700
+          }
+        ],
+        "partial_unexpected_index_list": [
+          4,
+          57,
+          96,
+          115,
+          117,
+          126,
+          131,
+          134,
+          136,
+          150,
+          156,
+          158,
+          170,
+          186,
+          187,
+          188,
+          195,
+          201,
+          202,
+          203
+        ],
+        "partial_unexpected_list": [
+          4100,
+          2800,
+          8700,
+          2600,
+          7000,
+          7100,
+          8000,
+          5400,
+          6700,
+          6400,
+          6100,
+          7000,
+          6300,
+          8000,
+          1800,
+          1900,
+          1600,
+          7300,
+          2100,
+          6800
+        ],
+        "unexpected_count": 3383,
+        "unexpected_percent": 6.766135322706454,
+        "unexpected_percent_nonmissing": 6.766135322706454,
+        "unexpected_percent_total": 6.766135322706454
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Postal Code",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Loan Sequence Number"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Loan Sequence Number",
+          "regex": "^(F|A)\\d{2}Q[1-4]\\d{7}$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Loan Sequence Number",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Loan Sequence Number",
+          "value": 12
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Loan Purpose"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Loan Purpose",
+          "value_set": [
+            "P",
+            "C",
+            "N",
+            "R",
+            "9"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Loan Purpose",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Loan Purpose",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original Loan Term"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original Loan Term",
+          "max_value": 3,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Original Loan Term",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Number of Borrowers"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Number of Borrowers",
+          "regex": "^(0[1-9]|10|99)$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 12,
+            "value": 2
+          },
+          {
+            "count": 8,
+            "value": 1
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2
+        ],
+        "unexpected_count": 49999,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Number of Borrowers",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Seller Name"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Seller Name",
+          "max_value": 60,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Seller Name",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Servicer Name"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Servicer Name",
+          "max_value": 60,
+          "min_value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Servicer Name",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Super Conforming Flag",
+          "value_set": [
+            "Y",
+            ""
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 49350,
+        "missing_percent": 98.70197403948079,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Super Conforming Flag",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 49350,
+        "missing_percent": 98.70197403948079,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Super Conforming Flag",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 49350,
+        "missing_percent": 98.70197403948079,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Pre-HARP Loan Sequence Number",
+          "regex": "^(F|A)\\d{2}Q[1-4]\\d{7}$"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 49999,
+        "missing_percent": 100.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": null,
+        "unexpected_percent_nonmissing": null,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Pre-HARP Loan Sequence Number",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Pre-HARP Loan Sequence Number",
+          "value": 12
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 49999,
+        "missing_percent": 100.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": null,
+        "unexpected_percent_nonmissing": null,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Program Indicator"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Program Indicator",
+          "value_set": [
+            "H",
+            "F",
+            "R",
+            "9"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": 9
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "unexpected_count": 46715,
+        "unexpected_percent": 93.43186863737274,
+        "unexpected_percent_nonmissing": 93.43186863737274,
+        "unexpected_percent_total": 93.43186863737274
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Program Indicator",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": 9
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "unexpected_count": 46715,
+        "unexpected_percent": 93.43186863737274,
+        "unexpected_percent_nonmissing": 93.43186863737274,
+        "unexpected_percent_total": 93.43186863737274
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Program Indicator",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "HARP Indicator",
+          "value_set": [
+            "Y",
+            ""
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 49999,
+        "missing_percent": 100.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": null,
+        "unexpected_percent_nonmissing": null,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "HARP Indicator",
+          "type_": "float"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "HARP Indicator",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 49999,
+        "missing_percent": 100.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": null,
+        "unexpected_percent_nonmissing": null,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property Valuation Method"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property Valuation Method",
+          "value_set": [
+            1,
+            2,
+            3,
+            4,
+            9
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property Valuation Method",
+          "type_": "int"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Property Valuation Method",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Interest Only (I/O) Indicator"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Interest Only (I/O) Indicator",
+          "value_set": [
+            "Y",
+            "N"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Interest Only (I/O) Indicator",
+          "type_": "str"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Interest Only (I/O) Indicator",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Mortgage Insurance Cancellation Indicator"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Mortgage Insurance Cancellation Indicator",
+          "value_set": [
+            "Y",
+            "N",
+            7
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "Origination_Datasource_1696586985.396239-Origination_Asset_1696586985.396239",
+          "column": "Mortgage Insurance Cancellation Indicator",
+          "value": 1
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 49999,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 100,
+    "success_percent": 88.0,
+    "successful_expectations": 88,
+    "unsuccessful_expectations": 12
+  },
+  "success": false
+}
