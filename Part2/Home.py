@@ -61,14 +61,16 @@ def downloadReport(report_html):
 
 
 def downloadGXReport(file_path):
-    with open(file_path, "rb") as file:
-        st.download_button(
-            label="Download GX Report JSON File",
-            data=file,
-            key="download_json_report",
-            file_name=os.path.basename(file_path),
-            mime="application/json",
-        )
+    # with open(file_path, "rb") as file:
+    #     st.download_button(
+    #         label="Download GX Report JSON File",
+    #         data=file,
+    #         key="download_json_report",
+    #         file_name=os.path.basename(file_path),
+    #         mime="application/json",
+    #     )
+
+    st.download_button(label="Download GX Report JSON File", data=file_path, mime='application/json')
 
 # def zip_download_button(report_html,gxReport):
 
