@@ -4,6 +4,9 @@ import great_expectations as gx
 import time
 from great_expectations.data_context import FileDataContext
 
+#Aditya
+import json
+
 class gx_origination_data:
     def __init__(self, data):
         current_timestamp = time.time()
@@ -375,9 +378,8 @@ class gx_origination_data:
         
         #Aditya
         print("Done gx-origination-report filepath {}".format(filepath))
-
-        
-
-        
-
+        print(checkpoint_result.to_json_string(), type(checkpoint_result.to_json_string()))
         return filepath
+
+        #returning actual gx-report-json data instead of locally persisted file.
+        
