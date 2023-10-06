@@ -4,7 +4,7 @@ import os
 
 st.write(os.getcwd())
 st.write(os.listdir())
-st.write(os.listir('Part2'))
+st.write(os.listir('./Part2'))
 
 
 
