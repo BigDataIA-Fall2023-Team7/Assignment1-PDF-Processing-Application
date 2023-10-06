@@ -356,7 +356,7 @@ class gx_origination_data:
 
         #Aditya added for debugging GX validation report fail
         print("Done gx-validating origination data supplied!")
-        print(checkpoint_result)
+        #print(checkpoint_result)
         print(type(checkpoint_result))
         
         self.context.build_data_docs()
