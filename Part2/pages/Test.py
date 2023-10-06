@@ -1,6 +1,13 @@
 import streamlit as st
 import os
 
+
+st.write(os.getcwd())
+st.write(os.listdir())
+st.write(os.listir('Part2'))
+
+
+
 def list_files_and_directories(path):
     for root, dirs, files in os.walk(path):
         st.write(f"Current directory: {root}")
