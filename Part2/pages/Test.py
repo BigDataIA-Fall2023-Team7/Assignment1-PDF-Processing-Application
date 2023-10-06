@@ -1,4 +1,8 @@
+import streamlit as st
 import os
 
-print(os.getcwd())
-print(os.listdir())
+a = os.getcwd()
+b = os.listdir()
+
+st.write(a)
+st.write(b)
