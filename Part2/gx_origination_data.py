@@ -361,12 +361,20 @@ class gx_origination_data:
         
         self.context.build_data_docs()
 
+        #Aditya
+        print("Done building data docs")
+
         result_string = str(list(checkpoint_result.run_results.keys()))
 
         path = result_string.replace("ValidationResultIdentifier::", "") 
 
         #Aditya
         filepath = "./Part2/gx/uncommitted/validations/" + path[1:-1] + ".json"
+
+
+        
+        #Aditya
+        print("Done gx-origination-report filepath {}".format(filepath))
 
         
 
