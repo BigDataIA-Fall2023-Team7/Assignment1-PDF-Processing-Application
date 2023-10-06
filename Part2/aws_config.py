@@ -46,26 +46,54 @@ class aws_config:
         current_timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
         filename = current_timestamp+'_'+uploaded_file.name
         s3_key = f"uploaded_data/{type}/{filename}"
-        self.s3client.upload_fileobj(uploaded_file,os.environ.get('BUCKET_NAME'), s3_key)
-        
-        s3_response = self.s3client.get_object(Bucket=os.environ.get('BUCKET_NAME'), Key = s3_key)
-        content =  s3_response['Body'].read()
 
-        if filename.endswith('.csv'):
-            df = pd.read_csv(io.BytesIO(content))
-        elif filename.endswith(('.xls', '.xlsx')):
-            df = pd.read_excel(io.BytesIO(content))
+        if uploaded_file.type == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
+            df = pd.read_excel(uploaded_file)
         else:
-            df = pd.DataFrame()
+            last_dot_csv_index = filename.rfind(".csv")
+            if last_dot_csv_index != -1:
+            # Replace ".csv" with ".xlsx"
+                new_file_name = filename[:last_dot_csv_index] + ".xlsx"
+            df = pd.read_csv(uploaded_file)
 
         if type == "Origination Data":
             df.columns = self.org_columns
+            # date_columns = ['First Payment Date', 'Maturity Date']
+            # for col in date_columns:
+            #     df[col] = pd.to_datetime(df[col], errors = 'coerce', format="%Y%m")
+            #     df[col] = df[col].apply(lambda x: x.strftime("%Y-%m-%d %H:%M:%S") if not pd.isna(x) else None)
+        else:
+            df.columns = self.monthly_columns
+            # date_columns = ['Monthly Reporting Period', 'Defect Settlement Date', 'Zero Balance Effective Date', 'Due Date of Last Paid Installment (DDLPI)']
+            # for col in date_columns:
+            #     df[col] = pd.to_datetime(df[col], errors = 'coerce', format="%Y%m")
+            #     df[col] = df[col].apply(lambda x: x.strftime("%Y-%m-%d %H:%M:%S") if not pd.isna(x) else None)
+
+        output_stream = io.BytesIO()
+        with pd.ExcelWriter(output_stream, engine="openpyxl", mode="xlsx") as writer:
+            df.to_excel(writer, index=False)
+
+        output_stream.seek(0)
+        self.s3client.upload_fileobj(output_stream,os.environ.get('BUCKET_NAME'), s3_key)
+        
+        # s3_response = self.s3client.get_object(Bucket=os.environ.get('BUCKET_NAME'), Key = s3_key)
+        # content =  s3_response['Body'].read()
+
+        # if filename.endswith('.csv'):
+        #     df = pd.read_csv(io.BytesIO(content))
+        # elif filename.endswith(('.xls', '.xlsx')):
+        #     df = pd.read_excel(io.BytesIO(content))
+        # else:
+        #     df = pd.DataFrame()
+
+        if type == "Origination Data":
+            # df.columns = self.org_columns
             date_columns = ['First Payment Date', 'Maturity Date']
             for col in date_columns:
                 df[col] = pd.to_datetime(df[col], errors = 'coerce', format="%Y%m")
                 df[col] = df[col].apply(lambda x: x.strftime("%Y-%m-%d %H:%M:%S") if not pd.isna(x) else None)
         else:
-            df.columns = self.monthly_columns
+            # df.columns = self.monthly_columns
             date_columns = ['Monthly Reporting Period', 'Defect Settlement Date', 'Zero Balance Effective Date', 'Due Date of Last Paid Installment (DDLPI)']
             for col in date_columns:
                 df[col] = pd.to_datetime(df[col], errors = 'coerce', format="%Y%m")
