@@ -360,6 +360,8 @@ class gx_origination_data:
         path = result_string.replace("ValidationResultIdentifier::", "") 
         filepath = "./Part2/gx/uncommitted/validations/" + path[1:-1] + ".json"
 
+        print("Done gx-validating origination data supplied!")
+
         
 
         return filepath
