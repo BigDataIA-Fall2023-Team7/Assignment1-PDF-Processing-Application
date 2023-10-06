@@ -6,7 +6,7 @@ from diagrams.onprem.network import Internet
 
 # Function that generates the flow/pipeline diagram
 def generate_diagram():
-    with Diagram("PDF Processing Flow", show=False, direction="TB", outformat="png"):
+    with Diagram(name="PDF Processing Flow", show=False, direction="LR", outformat="png"):
         user = Custom("User", "./images/user.png")
         app = Custom("Streamlit App", "./images/streamlit.png")
         storage = Server("Streamlit Cloud Storage")
