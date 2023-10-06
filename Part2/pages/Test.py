@@ -14,6 +14,6 @@ def list_files_and_directories(path):
             st.write(f"File: {os.path.join(root, file)}")
 
 # Specify the directory you want to start from
-start_directory = "."
+start_directory = "./Part2"
 list_files_and_directories(start_directory)
 
