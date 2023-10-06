@@ -361,6 +361,7 @@ class gx_origination_data:
         print("Done gx-validating origination data supplied!")
         #print(checkpoint_result)
         print(type(checkpoint_result))
+        print(checkpoint_result.to_json_dict(), type(checkpoint_result.to_json_dict()))
         
         self.context.build_data_docs()
 
@@ -373,12 +374,7 @@ class gx_origination_data:
 
         #Aditya
         filepath = "./Part2/gx/uncommitted/validations/" + path[1:-1] + ".json"
-
-
-        
-        #Aditya
         print("Done gx-origination-report filepath {}".format(filepath))
-        print(checkpoint_result.to_json_dict(), type(checkpoint_result.to_json_dict()))
         return filepath
 
         #returning actual gx-report-json data instead of locally persisted file.
