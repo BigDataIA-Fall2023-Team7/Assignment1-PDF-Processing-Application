@@ -216,6 +216,6 @@ class gx_monthly_data:
         result_string = str(list(checkpoint_result.run_results.keys()))
 
         path = result_string.replace("ValidationResultIdentifier::", "") 
-        filepath = "./gx/uncommitted/validations/" + path[1:-1] + ".json"
+        filepath = "./Part2/gx/uncommitted/validations/" + path[1:-1] + ".json"
         
         return filepath
