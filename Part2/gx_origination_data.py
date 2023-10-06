@@ -378,7 +378,7 @@ class gx_origination_data:
         
         #Aditya
         print("Done gx-origination-report filepath {}".format(filepath))
-        print(checkpoint_result.to_json_string(), type(checkpoint_result.to_json_string()))
+        print(checkpoint_result.to_json_dict(), type(checkpoint_result.to_json_dict()))
         return filepath
 
         #returning actual gx-report-json data instead of locally persisted file.
