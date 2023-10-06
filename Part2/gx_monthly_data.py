@@ -4,6 +4,9 @@ import great_expectations as gx
 import time
 from great_expectations.data_context import FileDataContext
 
+#Aditya
+import json
+
 class gx_monthly_data:
     def __init__(self, data):
         current_timestamp = time.time()
@@ -211,11 +214,13 @@ class gx_monthly_data:
 
         name = "Monthly_Data_Run@_"+str(current_timestamp)
         checkpoint_result = checkpoint.run(run_name=name)
-        self.context.build_data_docs()
+        
+        # # Aditya
+        # self.context.build_data_docs()
 
         result_string = str(list(checkpoint_result.run_results.keys()))
 
         path = result_string.replace("ValidationResultIdentifier::", "") 
         filepath = "./Part2/gx/uncommitted/validations/" + path[1:-1] + ".json"
         
-        return filepath
+        return json.dumps(checkpoint_result.to_json_dict())
