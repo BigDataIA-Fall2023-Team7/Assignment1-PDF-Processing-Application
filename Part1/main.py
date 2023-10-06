@@ -42,13 +42,6 @@ def get_output_filename(pdfProcessor):
 st.set_page_config(page_title="Asn1-Part1", page_icon='1️⃣', layout="wide", initial_sidebar_state="auto", menu_items=None)
 
 
-#-----------------------
-# .env file details
-# Nougat API Server URL
-nougatAPIServerURL = st.secrets["NGROK_API_GATEWAY_URL"]
-#-----------------------
-
-
 #PDF Link Validator - validate links ending without .pdf as some links could have request params
 # pdf_link_validator = re.compile(r'https?://\S+\.pdf(/)?$')
 pdf_link_validator = re.compile(r'https?://\S+$')
@@ -58,6 +51,9 @@ pdf_link_validator = re.compile(r'https?://\S+$')
 #Header
 st.header("PDF Processing Application")
 
+#Input Nougat API Server URL Textbox
+nougatAPIServerURL = st.text_input("Link to Nougat API Server", value="", max_chars=None, key="nougatAPIServerURL", type="default", help="Enter the link to the Nougat API Server")
+
 #Input PDF Link Textbox
 input_pdf_link = st.text_input("Link to PDF", value="", max_chars=None, key="input_pdf_link", type="default", help="Enter the link to the PDF which you want to send for processing!")
 
@@ -66,10 +62,11 @@ st.radio("Choose the PDF Processor: ",["Nougat", "PyPDF"], captions=["Recommende
 
 #Process Button
 if st.button("Process!", key="process_button", type='primary'):
-    if input_pdf_link!='':
+    if input_pdf_link!='' and nougatAPIServerURL!='':
         if re.search(pdf_link_validator, input_pdf_link):
             input_pdf_processor = st.session_state.input_pdf_processor
             try:
+                cleanData=""
                 downloaded_pdf_file = requests.get(input_pdf_link)
                 if downloaded_pdf_file.status_code == 200:
                     content_type = downloaded_pdf_file.headers.get("Content-Type")
@@ -102,9 +99,13 @@ if st.button("Process!", key="process_button", type='primary'):
                                 end_time = time.time()
 
                                 st.success("Processing complete!".format(input_pdf_link, input_pdf_processor), icon='✅')
-                            else:
-                                e = RuntimeError("Problem processing the PDF file on Nougat API Server! Try again after sometime.")
+                            elif processedPdfData.status_code == 404:
+                                e = RuntimeError("Connection to Nougat API Server lost!")
                                 st.exception(e)
+                            else:
+                                e = RuntimeError(str(processedPdfData.status_code) + " - " + processedPdfData.reason + "got from the API server")
+                                st.exception(e)
+                                
                             
                             # Calculate and display the processing time
                             if cleanData:
@@ -145,7 +146,10 @@ if st.button("Process!", key="process_button", type='primary'):
         else:
             st.error("Invalid Link: Please check your link {Input format : <http | https>://<server-location>.pdf</>}", icon='❗️')
     else:
-        st.error("Empty Link: Please enter a link to pdf in the textbox", icon='❗️')
+        if nougatAPIServerURL=="":
+            st.error("Empty Link: Please enter the URL to Nougat API Server", icon='❗️')
+        if input_pdf_link == "":
+            st.error("Empty Link: Please enter a link to pdf in the textbox", icon='❗️')
 
 
 
